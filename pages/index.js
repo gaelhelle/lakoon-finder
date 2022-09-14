@@ -71,7 +71,7 @@ export default function Home() {
             Find the first owner of a Rakkudo
           </h1>
         </div>
-        <div className="mx-6 lg:mx-20 rounded-3xl bg-white/10 p-6 lg:p-20">
+        <div className="mx-6 lg:mx-20 rounded-3xl bg-white/10 p-6 lg:p-20 lg:pb-8">
           <div className="text-center mb-4 text-red-500">
             {error && (
               <div>
@@ -100,8 +100,25 @@ export default function Home() {
                     Reset
                   </button>
                   <div>
-                    <span className="text-white/60">Address : </span> {"   "}
-                    <span className="break-all	">{firstOwner.wallet}</span>
+                    <div>
+                      <span className="text-white/60">Mint address : </span>{" "}
+                      {"   "}
+                      <a href={`https://solscan.io/token/${mintAddress}`}>
+                        <span className="break-all	">{mintAddress}</span>
+                      </a>
+                    </div>
+                    <div>
+                      <span className="text-white/60">Owner : </span> {"   "}
+                      <a
+                        href={`https://solscan.io/account/${firstOwner.wallet}`}
+                      >
+                        <span className="break-all	">{firstOwner.wallet}</span>
+                      </a>
+                    </div>
+                    <div>
+                      <span className="text-white/60">Slot : </span> {"   "}
+                      <span className="break-all	">{firstOwner.slot}</span>
+                    </div>
                   </div>
                 </div>
               ) : (
@@ -129,6 +146,9 @@ export default function Home() {
                 </>
               )}
             </div>
+          </div>
+          <div className="text-center mt-20 text-xs opacity-50">
+            test mint address : AJ3LyKbRCS3CJwYNf5vCQ1nXM8ZjZCBqhWA9TzekQ2xn
           </div>
         </div>
       </div>
