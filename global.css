@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+#__next,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #130c29;
+}
