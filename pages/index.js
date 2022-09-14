@@ -158,7 +158,7 @@ export default function Home() {
           <span className="text-gray-400">Developed by</span>
 
           <a
-            href="https://www.linkedin.com/in/gael/"
+            href="https://gaelhelle.fr"
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold"
