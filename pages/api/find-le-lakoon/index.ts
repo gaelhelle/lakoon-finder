@@ -88,31 +88,3 @@ const getTransfers = async (transactions) => {
     console.log(error);
   }
 };
-
-const getFirstOwner = async (mintAddress) => {
-  try {
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
-    const data = {
-      jsonrpc: "2.0",
-      id: 1,
-      method: "getSignaturesForAddress",
-      params: [
-        mintAddress,
-        {
-          mint: SOLANA_RPC_API.tokenId,
-        },
-      ],
-    };
-
-    const result = await axios.post(SOLANA_RPC_API.url, data, config);
-
-    return result;
-  } catch (error) {
-    console.log(error);
-  }
-};
