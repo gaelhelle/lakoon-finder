@@ -128,7 +128,7 @@ export default function Home() {
                     className={`bg-[#05040c] rounded-full h-12 transition-all ${
                       loading ? "w-0" : "w-48 lg:w-96 px-8"
                     }`}
-                    placeholder="Mint address of your rakkodu"
+                    placeholder="Mint address of your rakkudo"
                     onChange={(e) => {
                       setMintAddress(e.target.value);
                     }}
